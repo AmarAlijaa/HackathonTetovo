@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 const LandingPage = ({ navigation }) => {
     React.useLayoutEffect(() => {
@@ -9,10 +9,40 @@ const LandingPage = ({ navigation }) => {
     }, [navigation]);
 
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Landing Screen</Text>
-            <Button title="Go to Log In" onPress={() => navigation.navigate("Login")} />
-            <Button title="Go to Sign Up" onPress={() => navigation.navigate("Signup")} />
+        <View style={styles.bodyStyle}>
+            <View style={styles.upperHalf}>
+                <Image
+                    style={styles.LogoDesign}
+                    source={require('../screens/assets/images/1-removebg-preview.png')}
+                />
+                <Text style={styles.Slogan}>
+                    Your City,
+                    Your Routes,
+                    Your Way!
+                </Text>
+            </View>
+
+            <View style={styles.ButtonSection}>
+                <TouchableOpacity
+                    style={styles.Button}
+                    onPress={() => navigation.navigate("Signup")}
+                >
+                    <Text style={styles.ButtonText}>Sign-up</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.Button}
+                    onPress={() => navigation.navigate("Login")}
+                >
+                    <Text style={styles.ButtonText}>Log-in</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    onPress={() => navigation.navigate("Guest")}
+                >
+                    <Text style={styles.GuestText}>Continue as a guest</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };
