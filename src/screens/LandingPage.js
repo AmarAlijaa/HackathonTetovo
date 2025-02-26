@@ -7,6 +7,7 @@ const LandingPage = ({ navigation }) => {
             <Text>Landing Screen</Text>
             <Button title="Go to Log In" onPress={() => navigation.navigate("Login")} />
             <Button title="Go to Sign Up" onPress={() => navigation.navigate("Signup")} />
+            <Button title="Go to Parking Zone" onPress={() => navigation.navigate("ParkingZone")} />
         </View>
     );
 };
