@@ -5,6 +5,9 @@ import LandingPage from "./src/screens/LandingPage";
 import LoginScreen from "./src/screens/LogIn"
 import SignupScreen from "./src/screens/SignUp";
 import ParkingZone from "./src/Parking/ParkingZone";
+import HomeScreen from "./src/screens/HomeScreen";
+import BusTicket from "./src/Bus/BusTicket";
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -15,6 +18,8 @@ export default function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="ParkingZone" component={ParkingZone} />
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="BusTicket" component={BusTicket} />
         </Stack.Navigator>
       </NavigationContainer>
   );

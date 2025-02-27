@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 const LandingPage = ({ navigation }) => {
     React.useLayoutEffect(() => {
@@ -38,7 +38,7 @@ const LandingPage = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate("Guest")}
+                    onPress={() => navigation.navigate("HomeScreen")}
                 >
                     <Text style={styles.GuestText}>Continue as a guest</Text>
                 </TouchableOpacity>

@@ -21,7 +21,7 @@ const LoginScreen = ({ navigation }) => {
                 <TextInput style={styles.input} placeholder="Confirm Password" placeholderTextColor="#ddd" secureTextEntry />
 
                 {/* Continue Button */}
-                <TouchableOpacity style={styles.continueButton}>
+                <TouchableOpacity style={styles.continueButton} onPress={() => navigation.navigate("HomeScreen")}>
                     <Text style={styles.continueButtonText}>Continue</Text>
                 </TouchableOpacity>
 
@@ -32,7 +32,11 @@ const LoginScreen = ({ navigation }) => {
                     </Text>
                 </TouchableOpacity>
 
-                <Text style={styles.guestText}>Continue as guest</Text>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate("HomeScreen")}
+                >
+                    <Text style={styles.guestText}>Continue as a guest</Text>
+                </TouchableOpacity>
             </View>
 
             {/* White Section with SVG Illustration */}

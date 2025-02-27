@@ -28,7 +28,7 @@ const SignupScreen = ({ navigation }) => {
                 </View>
 
                 {/* Sign Up Button */}
-                <TouchableOpacity style={styles.continueButton}>
+                <TouchableOpacity style={styles.continueButton}  onPress={() => navigation.navigate("HomeScreen")}>
                     <Text style={styles.continueButtonText}>Sign Up</Text>
                 </TouchableOpacity>
 
@@ -39,7 +39,11 @@ const SignupScreen = ({ navigation }) => {
                     </Text>
                 </TouchableOpacity>
 
-                <Text style={styles.guestText}>Continue as guest</Text>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate("HomeScreen")}
+                >
+                    <Text style={styles.guestText}>Continue as a guest</Text>
+                </TouchableOpacity>
             </View>
 
             {/* White Section with Illustration */}
